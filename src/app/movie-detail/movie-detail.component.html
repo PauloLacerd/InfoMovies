@@ -1,0 +1,60 @@
+<!-- Detalhes sobre o filme. -->
+<section class="container">
+
+    <div class="row mt-5">
+
+        <img class="col-sm-6 col-md-6 img-fluid" [src]="'https://image.tmdb.org/t/p/w500/'+movie?.poster_path"
+            [alt]="'Pôster do filme '+ movie?.title" />
+
+        <div class="col-sm-12 col-md-6 border_contraste sinopse_Detail rounded" id="sinopse_Detail">
+
+            <h2>{{movie?.title}}</h2>
+            <p>Genêros: <label class="mr-2 mt-2 text-warning" *ngFor="let genre of genres">{{genre.name}}</label></p>
+            <h4>Sinopse:</h4>
+            <p class="mt-2">{{movie?.overview}}</p>
+            <div *ngIf="movie?.overview === ''">
+                <p class="h4">Sinopse indisponível.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <h3 class="mt-5 mb-3">Imagens do Filme:</h3>
+
+    <div class="row-flex" style="overflow-x: scroll;">
+        <div class="d-inline-flex">
+            <div class="border_contraste mr-1" *ngFor="let path of imagePath">
+                <img class="rounded" [src]="'https://image.tmdb.org/t/p/w500/'+path.file_path" alt="">
+            </div>
+        </div>
+    </div>
+
+    <h3 class="mt-5 mb-3">Atores do Filme:</h3>
+
+    <div class="row-flex" style="overflow-x: scroll;">
+        <div class="d-inline-flex">
+            <div *ngFor="let credit of credits" class="border_contraste mr-1" style="width: 18rem;">
+                <img [src]="'https://image.tmdb.org/t/p/w500/'+credit.profile_path"
+                    alt="" class="img-fluid" style="height: 400px;width: 400px;"/>
+                <div class="card-body">
+                    <p class="h4 card-title">Ator(a): {{credit.name}}</p>
+                    <p class="card-text">Personagem: {{credit.character}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="mt-5 mb-3">Equipe técnica do filme:</h3>
+
+    <div class="row-flex" style="overflow-x: scroll;">
+        <div class="d-inline-flex">
+            <div *ngFor="let technique of technicalTeam" class="border_contraste mr-1" style="width: 18rem;">
+                <div class="my-4 ml-4">
+                    <h4 class="card-title">{{technique.name}}</h4>
+                    <p>Função: {{technique.department}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
