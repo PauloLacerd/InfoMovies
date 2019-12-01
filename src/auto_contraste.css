@@ -1,0 +1,17 @@
+.contraste{
+    background-color: #000;
+    color: white;
+}
+
+.border_contraste{
+    border: solid 1px yellow;
+}
+
+#info_Home{
+    background-color: black;
+}
+
+.sinopse_Contraste{
+    background-color: #000;
+    color: white;
+}
