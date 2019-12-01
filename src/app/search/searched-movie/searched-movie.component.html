@@ -1,0 +1,32 @@
+<!-- Lista de filmes pesquisados -->
+<div class="container">
+    <mf-input-search></mf-input-search>
+</div>
+
+<section class="container">
+
+    <div class="row container">
+        <div *ngFor="let movie of searchs" class="border_contraste mt-3 col-sm-12 col-md-6 col-lg-4">
+
+            <a [routerLink]="['/movie', movie.id]" class="mx-auto my-auto text-dark">
+                <img class="img-fluid mt-2" [src]="'https://image.tmdb.org/t/p/w500/'+movie.poster_path"
+                    [alt]="'Pôster do filme ' + movie.title" />
+
+                <div class="card-body contraste">
+
+                    <h4 class="card-title">Titulo: {{movie.title}}</h4>
+                    <p class="card-text">Avaliação: {{movie.vote_average}} <i class="fas fa-star"></i></p>
+                    <p>Data de Lançamento: {{movie.release_date | date:"dd/MM/yyyy"}}</p>
+
+                </div>
+            </a>
+
+        </div>
+        
+        <div class="mt-5 container" *ngIf="searchs.length == 0">
+            <p class="h2">Não encontramos resultado para a sua busca.</p>
+        </div>
+
+    </div>
+
+</section>
