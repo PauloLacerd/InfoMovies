@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+#conteudo{
+    background-color: #DCDCDC;
+}
+
+.sinopse_Detail{
+    background-color: gray;
+    color: white;
+}
+
+.load{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    color: red;
+}
