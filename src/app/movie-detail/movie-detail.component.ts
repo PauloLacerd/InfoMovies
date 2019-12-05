@@ -52,6 +52,8 @@ export class MovieDetailComponent implements OnInit, AfterViewInit {
     if (link.getAttribute('href') === 'auto_contraste.css') {
       sinopse.classList.remove('sinopse_Detail')
     }
+
+    document.getElementById('img_poster').focus()
   }
 
   /**
