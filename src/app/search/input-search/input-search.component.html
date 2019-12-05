@@ -3,7 +3,7 @@
 
     <div class="form-group">
         <div class="d-flex justify-content-center">
-            <input formControlName="movieTitle" class="form-control col-sm-9 mr-2" type="search" placeholder="Qual filme você procura?"
+            <input formControlName="movieTitle" id="inputSearch" class="form-control col-sm-9 mr-2" type="search" placeholder="Qual filme você procura?"
                 #movieName />
 
             <button class="btn btn-primary text-light" [routerLink]="['/search', movieName.value]"
