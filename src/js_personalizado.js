@@ -46,6 +46,8 @@ function mudarContraste() {
     
     let sinopse = document.getElementById('sinopse_Detail')
     
+    this.setClassHeader()
+
     if (toggle_Contraste.getAttribute("href") === "") {
         body.setAttribute('id', '')
         toggle_Contraste.setAttribute("href", "auto_contraste.css")
@@ -60,5 +62,18 @@ function mudarContraste() {
             sinopse.classList.add('sinopse_Detail')
         }catch(err){
         }
+    }
+}
+
+/**
+ * Função para mudar a cor do componente header da aplicação.
+ */
+function setClassHeader(){
+    let header = document.getElementById('header')
+    
+    if(toggle_Contraste.getAttribute("href") === ""){
+        header.classList.remove('bg-info')
+    }else{
+        header.classList.add('bg-info')
     }
 }
