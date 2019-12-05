@@ -45,7 +45,9 @@ export class ListMoviesComponent implements OnInit {
    */
   getPage(){
     this.routePage.params.subscribe(
-      params => {this.page = params['page'], this.loadingPage(), this.getAllData()}
+      params => {this.page = params['page'], this.loadingPage(),
+      this.getAllData(),
+      document.getElementById('inputSearch').focus()}
     )
   }
   
