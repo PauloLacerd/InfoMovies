@@ -43,7 +43,7 @@ export class SearchedMovieComponent implements OnInit {
    */
   getMovieTitle(){
     this.routeMovieName.params.subscribe(
-      params => {this.title = params['movieName'], this.getSearch()}
+      params => {this.title = params['movieName'], this.getSearch(), document.getElementById('inputSearch').focus()}
     )
   }
 
