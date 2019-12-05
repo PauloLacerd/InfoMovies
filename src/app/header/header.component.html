@@ -1,21 +1,24 @@
-<nav class="contraste navbar navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar navbar-expand-sm navbar-dark bg-info border_contraste" id="header">
 
   <h1><a class="navbar-brand" [routerLink]="['/']"><i class="fas fa-film"></i> InfoMovies</a></h1>
   <a class="nav-link mt-2 text-light" [routerLink]="['/movies', 1]"><i class="fas fa-ticket-alt"></i> Filmes</a>
-
-</nav>
-
-<div class="row mt-4 mr-1">
   
-  <div class="col-sm-12">
-    <div class="d-flex justify-content-end">
-      
-      <button title="Auto contraste" onclick="mudarContraste()" class="btn btn-primary btn-lg mr-2"><i class="fas fa-adjust"></i></button>
-      <button title="Aumentar fonte" onclick="aumentarFonte()" class="btn btn-primary btn-lg"><i class="fas fa-font mr-1"></i><i class="fas fa-plus"></i></button>
-      <button title="Tamanho de fonte padrão" onclick="fontePadrao()" class="btn btn-primary btn-lg mx-2"><i class="fas fa-font"></i></button>
-      <button title="Diminuir fonte" onclick="diminuirFonte()" class="btn btn-primary btn-lg"><i class="fas fa-font mr-1"></i><i class="fas fa-minus"></i></button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navCollapse" aria-controls="navCollapse" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    </div>
+  <div class="collapse navbar-collapse justify-content-end" id="navCollapse">
+    
+ 
+
+      <button title="Auto contraste" onclick="mudarContraste()" class="btn btn-primary btn-sm mr-2"><i
+          class="fas fa-adjust"></i></button>
+      <button title="Aumentar fonte" onclick="aumentarFonte()" class="btn btn-primary btn-sm"><i
+          class="fas fa-font mr-1"></i><i class="fas fa-plus"></i></button>
+      <button title="Resetar tamanho da fonte" onclick="fontePadrao()" class="btn btn-primary btn-sm mx-2"><i
+          class="fas fa-font"></i></button>
+      <button title="Diminuir fonte" onclick="diminuirFonte()" class="btn btn-primary btn-sm"><i
+          class="fas fa-font mr-1"></i><i class="fas fa-minus"></i></button>
+
   </div>
-
-</div>
+</nav>
